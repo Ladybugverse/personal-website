@@ -19,15 +19,24 @@ class Page(HTMLParser):
   if tag=='html' and a.get('lang')=='en': self.lang=True
 pages={}
 for f in OUT.rglob('*.html'):
- p=Page(); p.feed(f.read_text()); pages[f.resolve()]=p
+ p=Page(); p.feed(f.read_text(encoding='utf-8')); pages[f.resolve()]=p
 errors=[]
+if (OUT / 'index.html').resolve() not in pages:
+ errors.append('Missing generated home page')
+if not pages:
+ errors.append('No HTML pages generated')
 for f,p in pages.items():
  if not(p.title and p.description and p.lang and p.h1==1): errors.append(f'{f}: missing metadata or incorrect h1 count')
  if len(p.ids)!=len(set(p.ids)): errors.append(f'{f}: duplicate IDs')
  for link in p.links:
   u=urlsplit(link)
-  if u.scheme or u.netloc or u.path.startswith('/'): continue
-  dest=(f.parent/unquote(u.path)).resolve() if u.path else f
+  if u.scheme or u.netloc: continue
+  if u.path.startswith('/personal-website/'):
+   dest=(OUT / unquote(u.path.removeprefix('/personal-website/'))).resolve()
+  elif u.path.startswith('/'):
+   errors.append(f'{f}: unexpected absolute path {link}'); continue
+  else:
+   dest=(f.parent/unquote(u.path)).resolve() if u.path else f
   if dest.is_dir(): dest=dest/'index.html'
   if not dest.exists(): errors.append(f'{f}: broken local link {link}')
   if u.fragment and dest in pages and unquote(u.fragment) not in pages[dest].ids: errors.append(f'{f}: missing fragment {link}')

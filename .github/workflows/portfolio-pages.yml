@@ -22,7 +22,9 @@ jobs:
       - run: python scripts/build.py
       - run: python scripts/check.py
       - name: Check generated content is committed
-        run: git diff --exit-code -- docs
+        run: |
+          git diff --exit-code -- docs
+          test -z "$(git ls-files --others --exclude-standard -- docs)"
       - uses: actions/upload-pages-artifact@v3
         with:
           path: docs
