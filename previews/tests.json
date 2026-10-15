@@ -1,0 +1,96 @@
+[
+  {
+    "name": "Compare directions while retaining a case study",
+    "sanity": true,
+    "viewport": "desktop",
+    "covers": [
+      "direction switching",
+      "project navigation",
+      "case-study content",
+      "deep-link restoration"
+    ],
+    "description": "Compares the same project across all directions and restores it after reload.",
+    "steps": [
+      "In the Bold Creative Technologist iframe navigate to Selected work and open Mow Magic.",
+      "Choose Luxury Editorial then Expressive Digital Studio using the outer direction buttons.",
+      "Refresh the page."
+    ],
+    "expected": "The studio direction and Mow Magic case remain selected after reload with hash studio/mow-magic. The full case study includes source implementation status and What still needs verification."
+  },
+  {
+    "name": "Filter projects and use mobile navigation",
+    "viewport": "mobile",
+    "covers": [
+      "mobile menu",
+      "project filtering",
+      "filtered exclusions",
+      "case-study return link",
+      "approved contact"
+    ],
+    "description": "Uses mobile navigation and filtering while preserving contact details.",
+    "steps": [
+      "Choose Expressive Digital Studio and Mobile viewport then Back to homepage.",
+      "Inside the preview open Menu + and select Selected work.",
+      "Activate Operations filter and confirm only the Mow Magic project article remains visible.",
+      "Open Mow Magic then use All selected work to return.",
+      "Open Menu + and select Let's connect."
+    ],
+    "expected": "Nonmatching project articles are hidden. Project navigation and return stay inside the preview. Contact exposes mailto:tifflegg93@gmail.com without submitting anything, and outer controls fit mobile."
+  },
+  {
+    "name": "Inspect all case studies in both device views",
+    "viewport": "desktop",
+    "covers": [
+      "paired desktop/mobile view",
+      "page selection",
+      "all four case studies",
+      "responsive viewport"
+    ],
+    "description": "Shows each original case study at both requested viewport widths.",
+    "steps": [
+      "Choose Desktop + mobile viewport.",
+      "Use Page selector to inspect Mow Magic, Everfold, RunHouse Digital and Mow Magic Design System.",
+      "Inspect matching titles, role and implementation status in both iframes.",
+      "Choose Luxury Editorial, Homepage and Responsive viewport."
+    ],
+    "expected": "Two labeled previews show the selected case study in paired mode. Responsive mode renders one viewport at available width. All original case-study sections remain accessible."
+  },
+  {
+    "name": "Inspect evidence and production isolation guardrails",
+    "viewport": "desktop",
+    "covers": [
+      "evidence disclosure",
+      "real source URLs",
+      "prototype limitations",
+      "production isolation",
+      "email destination"
+    ],
+    "description": "Verifies evidence disclosure and guards against unsupported claims or production replacement actions.",
+    "steps": [
+      "Choose Luxury Editorial and RunHouse Digital from the Page selector.",
+      "Expand Inspect implementation evidence inside the preview.",
+      "Inspect the Interactive estimator link destination without requiring private repository access.",
+      "Read What still needs verification.",
+      "Return to Homepage and inspect contact email. Inspect the comparison shell for publishing controls."
+    ],
+    "expected": "Evidence expands to real GitHub source URLs. Frontend prototype and illustrative-pricing limits remain. Approved email is tifflegg93@gmail.com. The shell says Preview only and has no action to publish, approve or replace the production design."
+  },
+  {
+    "name": "Keyboard filtering and browser back",
+    "viewport": "desktop",
+    "covers": [
+      "keyboard focus",
+      "pressed states",
+      "filter restoration",
+      "browser back"
+    ],
+    "description": "Exercises keyboard comparison controls and local navigation.",
+    "steps": [
+      "Use keyboard Tab and Enter or Space to choose Bold Creative Technologist.",
+      "Select Homepage and Responsive viewport.",
+      "Inside the iframe use the keyboard to activate Business systems filter then All work.",
+      "Open Everfold and use browser Back."
+    ],
+    "expected": "Focus is visible. Pressed states identify active direction and filter. All work restores four projects. Browser Back returns to the homepage within the comparison without opening production."
+  }
+]
