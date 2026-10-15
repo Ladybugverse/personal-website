@@ -30,7 +30,7 @@ Forks, unrelated family applications, small scaffolds, and repositories without 
 
 ## Contact and future evidence
 
-No personal email, phone, home address or resume PDF was published. Current contact paths are GitHub-based. The next useful upgrade is a confirmed professional email plus sanitized screenshots from a verified running application. A fictional service request traced across screens would demonstrate operational reasoning; label manual handoffs and do not imply an automated integration.
+Tiffany approved tifflegg93@gmail.com as the public employer contact email on October 14, 2026; it is now the primary contact link, alongside GitHub. No phone, home address or resume PDF was published. The next useful upgrade is sanitized screenshots from a verified running application. A fictional service request traced across screens would demonstrate operational reasoning; label manual handoffs and do not imply an automated integration.
 
 ## Verification limits
 

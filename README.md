@@ -42,7 +42,7 @@ A completed Actions deployment and a successful HTTP check of the returned URL a
 
 Mow Magic reuses the existing Notion case study. Other projects were selected based on inspected implementation evidence. No fabricated metrics, certifications, client engagements or sole-authorship claims are included. Private repository links are marked as restricted; the public portfolio contains summaries, not private source or business records. Conceptual diagrams are not screenshots.
 
-The contact section currently offers a GitHub profile and a public professional-inquiry issue link. Replace/add a direct email or LinkedIn link only after confirming the preferred public contact details. Never request sensitive information in public issues. Add a resume only after reviewing its public contact information and confirming the version to publish.
+The contact section offers the user-approved public employer email, tifflegg93@gmail.com, plus a GitHub profile link. The email was confirmed October 14, 2026. Add a resume only after reviewing its public contact information and confirming the version to publish.
 
 ## Legacy starter
 
