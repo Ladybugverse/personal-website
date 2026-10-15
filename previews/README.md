@@ -30,3 +30,13 @@ Embedded JavaScript parses successfully. Original source pages are retained verb
 
 ## Files
 Only previews/portfolio-directions.html, previews/tests.json and this README are added to this branch. docs/ and master remain unchanged.
+
+## Hosted comparison and checks
+Review URL: https://tiffany-legg-portfolio-design-previews-4cxmi6.v2.appdeploy.ai/
+
+Direct directions:
+- #tech/home
+- #luxury/home
+- #studio/home
+
+Deployment reached ready. The hosting service returned desktop/mobile QA captures and empty frontend/network/runtime error arrays. Five workflow scenarios were submitted, but the returned status did not include their pass/fail results; do not describe them as passing. No independent manual browser inspection was possible in this session. Google Fonts may fall back if external font loading is blocked. The committed standalone comparison was fetched back and matched its generated source byte-for-byte. The production homepage blob SHA remained unchanged.
