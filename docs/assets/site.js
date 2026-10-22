@@ -10,3 +10,19 @@ if (filters) {
     document.querySelector('#filter-result').textContent = `${projects.filter(project => !project.hidden).length} projects shown`;
   });
 }
+
+// Progressive enhancement only: every section remains visible without JavaScript.
+if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.intro-band, .section-heading, .method-grid > div').forEach(section => {
+    section.classList.add('reveal-ready');
+    observer.observe(section);
+  });
+}
